@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Microsoft 제품 소개</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="left">
+      <div class="logo"><img src="assets/Microsoft.png"></div>
+      <nav class="main-nav">
+        <a href="#">Microsoft 365</a>
+        <a href="#">Teams</a>
+        <a href="#">Copilot</a>
+        <a href="#">Windows</a>
+        <a href="#">Surface</a>
+        <a href="#">Xbox</a>
+        <a href="#">세일</a>
+        <a href="#">지원</a>
+      </nav>
+      <button class="nav-more" aria-expanded="false" aria-controls="nav-expanded">자세히 <svg class="nav-more-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+    <div class="right">
+      <a class="nav-link all-ms" href="#">Microsoft 전체
+        <svg class="icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a class="nav-link search" href="#">검색
+        <svg class="icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </a>
+      <a class="nav-link cart" href="#">카트
+        <svg class="icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 6h15l-1.5 8.5a2 2 0 0 1-2 1.5H9a2 2 0 0 1-2-1.5L5 4H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="10" cy="20" r="1" fill="currentColor"/>
+          <circle cx="18" cy="20" r="1" fill="currentColor"/>
+        </svg>
+      </a>
+      <a class="nav-link login" href="#" id="nav-login">로그인
+        <svg class="icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+          <path d="M4 20c2-4 6-6 8-6s6 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+  <div id="nav-expanded" class="nav-expanded" hidden></div>
+
+  <main>
+        <section class="hero">
+      <div class="slides">
+        <div class="slide-item active">
+          <picture>            <source media="(max-width:600px)" srcset="assets/main1_2.avif">            <img class="slide" src="assets/main1.jpg" alt="메인 이미지 1">          </picture>
+          <div class="slide-overlay">
+            <h2>Surface Laptop 살펴보기</h2>
+            <p>매우 강력한 노트북으로 라이브 캡션 및 Cocreator와 같은 AI 기능을 활용하세요.</p>
+<a class="primary-btn" href="#">자세한 내용</a>
+          </div>
+        </div>
+        <div class="slide-item">
+          <picture>            <source media="(max-width:600px)" srcset="assets/main1_2.avif">            <img class="slide" src="assets/main2.jpg" alt="메인 이미지 2">          </picture>
+          <div class="slide-overlay">
+            <h2>뛰어난 성과 달성</h2>
+            <p>Microsoft 365는 하나의 요금제로 클라우드 저장소, 보안, 자주 사용하는 앱에서의 Microsoft Copilot을 제공합니다.</p>
+<a class="primary-btn" href="#">Microsoft 365 구입</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-controls">
+        <div class="play-controls"><button class="slide-btn autoplay" aria-label="재생" data-playing="false" aria-pressed="false" type="button">
+            <svg class="icon-play" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 3v18l15-9z" fill="currentColor"/></svg>
+            <svg class="icon-pause" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z" fill="currentColor"/></svg>
+          </button></div>        <button class="slide-btn prev" aria-label="이전 배너">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="dots" role="tablist" aria-label="배너 목록">
+          <button class="dot active" aria-label="배너 1"></button>
+          <button class="dot" aria-label="배너 2"></button>
+        </div>
+        <button class="slide-btn next" aria-label="다음 배너">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Quick action buttons -->
+    <section class="quick-actions" aria-label="빠른 바로가기">
+      <div class="actions">
+        <a class="action" href="#" aria-label="세일">
+          <img src="assets/button_1.avif" alt="세일 아이콘">
+          <span>세일</span>
+        </a>
+        <a class="action" href="#" aria-label="내게 맞는 Microsoft 365 선택하기">
+          <img src="assets/button_2.svg" alt="Microsoft 365 선택 아이콘">
+          <span>내게 맞는 Microsoft 365 선택하기</span>
+        </a>
+        <a class="action" href="#" aria-label="Xbox 게임 쇼핑">
+          <img src="assets/button_3.svg" alt="Xbox 아이콘">
+          <span>Xbox 게임 쇼핑</span>
+        </a>
+        <a class="action" href="#" aria-label="Windows 11 받기">
+          <img src="assets/button_4.svg" alt="Windows 아이콘">
+          <span>Windows 11 받기</span>
+        </a>
+        <a class="action" href="#" aria-label="Surface 디바이스 쇼핑하기">
+          <img src="assets/button_5.svg" alt="Surface 아이콘">
+          <span>Surface 디바이스 쇼핑하기</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="grid">
+        <article class="card">
+          <img src="assets/prod1.avif" alt="제품1">
+          <h3>Windows 365</h3>
+          <p>클라우드 PC를 통한 유연한 업무 환경.</p>
+          <a class="link" href="#">더보기</a>
+        </article>
+        <article class="card">
+          <img src="assets/prod2.avif" alt="제품2">
+          <h3>Microsoft 365</h3>
+          <p>생산성 도구와 협업 플랫폼 제공.</p>
+          <a class="link" href="#">더보기</a>
+        </article>
+        <article class="card">
+          <img src="assets/prod3.avif" alt="제품3">
+          <h3>Azure</h3>
+          <p>확장 가능한 클라우드 인프라 제공.</p>
+          <a class="link" href="#">더보기</a>
+        </article>
+        <article class="card">
+          <img src="assets/prod4.avif" alt="제품4">
+          <h3>Surface</h3>
+          <p>프리미엄 하드웨어와 생산성의 결합.</p>
+          <a class="link" href="#">자세히</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="grid">
+        <article class="card">
+          <img src="assets/prod5.avif" alt="제품1">
+          <h3>Windows 365</h3>
+          <p>클라우드 PC를 통한 유연한 업무 환경.</p>
+          <a class="link" href="#">더보기</a>
+        </article>
+        <article class="card">
+          <img src="assets/prod6.avif" alt="제품2">
+          <h3>Microsoft 365</h3>
+          <p>생산성 도구와 협업 플랫폼 제공.</p>
+          <a class="link" href="#">더보기</a>
+        </article>
+        <article class="card">
+          <img src="assets/prod7.avif" alt="제품3">
+          <h3>Azure</h3>
+          <p>확장 가능한 클라우드 인프라 제공.</p>
+          <a class="link" href="#">더보기</a>
+        </article>
+        <article class="card">
+          <img src="assets/prod8.jpg" alt="제품4">
+          <h3>Surface</h3>
+          <p>프리미엄 하드웨어와 생산성의 결합.</p>
+          <a class="link" href="#">자세히</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; Microsoft. All rights reserved.</p>
+  </footer>
+
+  <!-- Auth modal -->
+  <div id="auth-modal" class="auth-modal" hidden>
+    <div class="auth-modal-backdrop"></div>
+    <div class="auth-modal-panel" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+      <button class="auth-close" aria-label="close">✕</button>
+      <h3 id="auth-title">로그인 또는 가입</h3>
+      <form id="auth-form">
+        <label>
+          이메일
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          비밀번호
+          <input type="password" name="password" minlength="6" required />
+        </label>
+        <div class="auth-actions">
+          <button type="submit" data-mode="login">로그인</button>
+          <button type="button" data-mode="register">회원가입</button>
+        </div>
+      </form>
+      <div class="auth-msg" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/auth.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

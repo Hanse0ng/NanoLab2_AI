@@ -1,0 +1,194 @@
+/*
+  styles.css ??structure-only refactor
+  - No visual changes intended
+  - Grouped by section with comments
+*/
+
+/* ========== CSS Variables & Base ==========
+   - color tokens and base resets
+=========================================== */
+:root{
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --accent: #0078d4;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Segoe UI, Roboto, Arial, sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+
+/* ========== Header ==========
+   - top navigation and actions
+================================ */
+.site-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:nowrap;padding:calc(16px) 24px;border-bottom:1px solid #eee;font-size:0.8rem}
+.site-header .left{display:flex;align-items:center;gap:50px;margin-left:100pt;white-space:nowrap;flex-shrink:0}
+.logo{font-weight:700;font-size:20px;color:var(--text)}
+.logo img{width:108px;height:auto}
+.main-nav a{margin-right:18px;color:var(--text);text-decoration:none}
+.main-nav{white-space:nowrap}
+.nav-more{display:none;background:transparent;border:none;color:var(--text);padding:8px 10px;border-radius:4px;cursor:pointer;font-size:1em;line-height:1;transform:translateY(-0.15em)}
+.site-header .right{display:flex;align-items:center;gap:8px;margin-right:100pt;white-space:nowrap;flex-shrink:0}
+.site-header .logo,.site-header .main-nav,.site-header .nav-more,.site-header .right{flex-shrink:0}
+.site-header .right .nav-link{display:inline-flex;align-items:center;color:var(--text);text-decoration:none}
+.site-header .right .all-ms{color:var(--text);text-decoration:none;margin-right:12px}
+.site-header .right .icon-svg{width:16px;height:16px;margin-left:6px}
+/* extra spacing between search and cart */
+.site-header .right .nav-link.search{margin-right:32px}
+.icon{background:transparent;border:1px solid transparent;padding:8px;border-radius:0;cursor:pointer;font-size:1em}
+.cta{background:var(--accent);color:#fff;border:none;padding:8px 12px;border-radius:0;cursor:pointer}
+
+/* Header underline hover */
+.site-header a, .site-header button {
+  text-decoration: none;
+  padding-bottom: 6px;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: none;
+}
+.site-header a:hover, .site-header a:focus, .site-header button:hover, .site-header button:focus {
+  background-size: 100% 3px;
+  outline: none;
+}
+
+/* ========== Hero ==========
+   - hero container and placeholder text
+====================================== */
+.hero{position:relative;width:100%;overflow:hidden}
+.hero .slides{width:100%}
+.hero .hero-text{position:absolute;left:40px;top:40px;color:#fff}
+
+/* ========== Products Grid ==========
+   - responsive grid and cards
+==================================== */
+.products{max-width:1700px;margin:0 auto;padding:12px}
+.grid{display:grid;grid-template-columns: repeat(4, minmax(220px, 1fr));gap:20px;align-items:start}
+.card{background:#fff;border:1px solid #eee;border-radius:0;padding:12px;box-shadow:0 2px 6px rgba(0,0,0,0.04);max-width:400px;margin:0 auto}
+.card img{width:100%;height:auto;border-radius:0}
+.card h3{margin:12px 0 8px}
+.card p{margin:0 0 12px;color:var(--muted)}
+.card .link{display:inline-block;padding:8px 12px;background:var(--accent);color:#fff;border-radius:4px;text-decoration:none}
+
+@media(max-width:1000px){ .grid{grid-template-columns:repeat(2,1fr);gap:24px} }
+@media(max-width:600px){ .grid{grid-template-columns:1fr} .products{max-width:1700px;margin:0 auto;padding:12px} }
+
+/* ========== Slideshow ==========
+   - slide items and overlays
+================================ */
+.slides{position:relative;width:100%;display:block;overflow:hidden}
+.slide-item{position:relative;display:none}
+.slide-item.active{display:block}
+.slide-item img{display:block;width:100%;height:auto}
+.slide-overlay{position:absolute;top:40px;left:40px;z-index:10;color:#000;max-width:480px;padding:12px;background:transparent;border-radius:0;display:none}
+.slide-overlay.active{display:block}
+
+/* ========== Controls ==========
+   - arrows, dots and container
+================================ */
+.slide-controls{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:12px}
+.slide-btn{background:transparent;border:0;cursor:pointer;padding:6px;display:inline-flex;align-items:center;justify-content:center}
+.slide-btn svg{width:28px;height:28px;color:var(--text)}
+.dots{display:flex;gap:8px;align-items:center}
+.dot{width:10px;height:10px;border-radius:50%;background:#ccc;border:0;padding:0}
+.dot.active{background:var(--accent)}
+
+/* ========== Accessibility ==========
+   - focus outlines for controls
+==================================== */
+.slide-btn:focus{outline:2px solid rgba(0,0,0,0.12);outline-offset:2px}
+.dot:focus{outline:2px solid rgba(0,0,0,0.12);outline-offset:2px}
+
+/* ========== Overlay Button ==========
+   - cta inside slide overlay
+===================================== */
+.slide-overlay .primary-btn{display:inline-block;background:var(--accent);color:#fff;padding:8px 14px;border-radius:0;border:none;text-decoration:none;cursor:pointer}
+
+/* ========== Layout Overrides ==========
+   - keep margins compact on grid
+======================================= */
+.products .grid{margin-left:0 !important;margin-right:0 !important}
+
+/* ========== Play / Pause ==========
+   - autoplay toggle styles
+=================================== */
+.play-controls{display:flex;align-items:center;margin-right:8px}
+.slide-btn.autoplay{font-size:14px;padding:6px 8px;border-radius:4px;background:#f3f3f3;border:1px solid #ddd}
+
+/* ========== Footer ==========
+   - simple footer styling
+============================= */
+.site-footer{padding:20px 24px;border-top:1px solid #eee;text-align:center;color:var(--muted)}
+
+/* ========== Expanded Nav (below header) ==========
+   - revealed when main-nav collapses
+======================================== */
+.nav-expanded{display:none;padding:12px 24px;border-top:1px solid #eee}
+.nav-expanded.open{display:block}
+.nav-expanded .nav-expanded-inner{display:flex;flex-wrap:wrap;gap:12px}
+.nav-expanded .nav-expanded-inner a{color:var(--text);text-decoration:none}
+.nav-expanded .nav-expanded-inner a:hover{color:var(--accent)}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Small screens: move slide overlay to bottom and adjust width */
+@media (max-width: 600px) {
+  .slide-overlay { top: auto; bottom: 20px; left: 20px; right: 20px; max-width: none; padding: 12px; }
+  .slide-overlay.active { display: block; }
+}
+
+
+
+/* nav-more arrow */
+.nav-more .nav-more-arrow{width:16px;height:16px;display:inline-block;vertical-align:middle;margin-left:8px;stroke:currentColor;fill:none}
+
+/* autoplay icons */
+.slide-btn.autoplay .icon-play{display:inline-block;width:16px;height:16px;vertical-align:middle} 
+.slide-btn.autoplay .icon-pause{display:none;width:16px;height:16px;vertical-align:middle} 
+.slide-btn.autoplay.playing .icon-play{display:none} 
+.slide-btn.autoplay.playing .icon-pause{display:inline-block} 
+/* Quick actions (icons above labels) */
+.quick-actions{max-width:1200px;margin:18px auto;padding:12px}
+.quick-actions .actions{display:flex;gap:12px;justify-content:flex-start;align-items:center;flex-wrap:wrap}
+.quick-actions .action{display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;color:var(--accent);padding:8px;border-radius:6px;background:transparent;flex:0 1 calc((100% - 48px)/5);min-width:100px;max-width:calc((100% - 48px)/5)}
+.quick-actions .action img{width:48px;height:48px;object-fit:cover;margin-bottom:8px;border-radius:6px}
+.quick-actions .action span{display:block;font-size:0.9rem;color:var(--accent);font-weight:700;text-decoration:underline}
+.quick-actions .action:focus, .quick-actions .action:hover{box-shadow:none;transform:none;transition:none}
+
+@media (max-width:1100px){
+  .quick-actions .action{flex:0 1 calc((100% - 36px)/4);max-width:calc((100% - 36px)/4)}
+}
+@media (max-width:880px){
+  .quick-actions .action{flex:0 1 calc((100% - 24px)/3);max-width:calc((100% - 24px)/3)}
+}
+@media (max-width:640px){
+  .quick-actions .action{flex:0 1 calc((100% - 12px)/2);max-width:calc((100% - 12px)/2)}
+}
+@media (max-width:420px){
+  .quick-actions .action{flex:1 1 100%;max-width:100%}
+  .quick-actions .actions{gap:10px}
+}
+
+/* Auth modal styles */
+.auth-modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:9999}
+.auth-modal[hidden]{display:none}
+.auth-modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.45)}
+.auth-modal-panel{position:relative;background:#fff;padding:18px;border-radius:8px;min-width:300px;max-width:420px;z-index:2;box-shadow:0 10px 30px rgba(0,0,0,0.2)}
+.auth-modal-panel label{display:block;margin-bottom:8px;font-size:0.9rem}
+.auth-modal-panel input{width:100%;padding:8px;margin-top:6px;border:1px solid #ddd;border-radius:4px}
+.auth-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+.auth-actions button{padding:8px 12px;border-radius:6px;border:1px solid #ddd;background:#f6f6f6;cursor:pointer}
+.auth-close{position:absolute;right:8px;top:6px;border:0;background:transparent;font-size:1rem;cursor:pointer}
+.auth-msg{margin-top:8px;color:#b00020;font-size:0.9rem}
+
