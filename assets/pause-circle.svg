@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-hidden="true">
+  <!-- Circle outline with two centered pause bars -->
+  <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <rect x="8" y="7" width="2.5" height="10" rx="0.6" fill="currentColor"/>
+  <rect x="13.5" y="7" width="2.5" height="10" rx="0.6" fill="currentColor"/>
+</svg>
+

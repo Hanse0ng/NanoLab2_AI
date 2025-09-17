@@ -1,0 +1,53 @@
+새로운 기능
+- Surface Pro
+- Surface Laptop
+- 조직용 Copilot
+- 개인 사용자용 Copilot
+- Microsoft 365
+- Microsoft 제품 살펴보기
+- Windows 11 앱
+
+Microsoft Store
+- 계정 프로필
+- 다운로드 센터
+- Microsoft Store 지원
+- 반품/환불
+- 주문 조회
+
+교육
+- Microsoft Education
+- 교육용 장치
+- 교육용 Microsoft Teams
+- Microsoft 365 Education
+- Office Education
+- 교육자 트레이닝 및 개발
+- 학생 및 학부모용 특가 혜택
+- Azure for students
+
+기업 고객
+- Microsoft Cloud
+- Microsoft Security
+- Azure
+- Dynamics 365
+- Microsoft 365
+- Microsoft Advertising
+- Microsoft 365 Copilot
+- Microsoft Teams
+
+개발자 및 IT
+- Microsoft 개발자
+- Microsoft Learn
+- AI 마켓플레이스 앱 지원
+- Microsoft Tech 커뮤니티
+- Azure Marketplace
+- AppSource
+- Microsoft Power Platform
+- Visual Studio
+
+회사
+- 채용 정보
+- Microsoft 정보
+- 회사 뉴스
+- Microsoft 개인 정보 보호
+- 투자자
+- 지속 가능성
