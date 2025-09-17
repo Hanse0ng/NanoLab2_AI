@@ -31,10 +31,32 @@
     // autoplay
     var autoplayInterval = null;
     var autoplayDelay = 6000; // ms
-    function startAutoplay(){ if(autoplayInterval) return; autoplayInterval = setInterval(function(){ setActive((idx+1)%slideItems.length); }, autoplayDelay); if(autoplayBtn){ autoplayBtn.textContent='⏸'; autoplayBtn.setAttribute('aria-pressed','true'); autoplayBtn.dataset.playing='true'; } }
-    function stopAutoplay(){ if(!autoplayInterval) return; clearInterval(autoplayInterval); autoplayInterval = null; if(autoplayBtn){ autoplayBtn.textContent='▶'; autoplayBtn.setAttribute('aria-pressed','false'); autoplayBtn.dataset.playing='false'; } }
+    function startAutoplay(){
+      if(autoplayInterval) return;
+      autoplayInterval = setInterval(function(){ setActive((idx+1)%slideItems.length); }, autoplayDelay);
+      if(autoplayBtn){
+        autoplayBtn.classList.add('playing');
+        autoplayBtn.setAttribute('aria-pressed','true');
+        autoplayBtn.dataset.playing='true';
+      }
+    }
+    function stopAutoplay(){
+      if(!autoplayInterval) return;
+      clearInterval(autoplayInterval);
+      autoplayInterval = null;
+      if(autoplayBtn){
+        autoplayBtn.classList.remove('playing');
+        autoplayBtn.setAttribute('aria-pressed','false');
+        autoplayBtn.dataset.playing='false';
+      }
+    }
     // default: paused (do not start)
-    if(autoplayBtn){ autoplayBtn.dataset.playing = 'false'; autoplayBtn.textContent='▶'; autoplayBtn.setAttribute('aria-pressed','false'); autoplayBtn.addEventListener('click', function(e){ e.preventDefault(); var playing = this.dataset.playing === 'true'; if(playing) stopAutoplay(); else startAutoplay(); }); }
+    if(autoplayBtn){
+      autoplayBtn.dataset.playing = 'false';
+      autoplayBtn.classList.remove('playing');
+      autoplayBtn.setAttribute('aria-pressed','false');
+      autoplayBtn.addEventListener('click', function(e){ e.preventDefault(); var playing = this.dataset.playing === 'true'; if(playing) stopAutoplay(); else startAutoplay(); });
+    }
 
     // controls
     if(prev) prev.addEventListener('click', function(e){ e.preventDefault(); setActive(idx-1); });
@@ -122,6 +144,17 @@
       if(resizeTimer) cancelAnimationFrame(resizeTimer);
       resizeTimer = requestAnimationFrame(checkFit);
     });
+  });
+})();
+
+// Back to top button handler
+(function(){
+  function goTop(){ window.scrollTo({top:0,behavior:'smooth'}); }
+  function ready(fn){ if(document.readyState !== 'loading') fn(); else document.addEventListener('DOMContentLoaded', fn); }
+  ready(function(){
+    var btn = document.getElementById('back-to-top');
+    if(!btn) return;
+    btn.addEventListener('click', function(e){ e.preventDefault(); goTop(); });
   });
 })();
 

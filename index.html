@@ -74,8 +74,8 @@
 
       <div class="slide-controls">
         <div class="play-controls"><button class="slide-btn autoplay" aria-label="재생" data-playing="false" aria-pressed="false" type="button">
-            <svg class="icon-play" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 3v18l15-9z" fill="currentColor"/></svg>
-            <svg class="icon-pause" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z" fill="currentColor"/></svg>
+            <img class="icon-play" src="assets/play-circle.svg" width="24" height="24" alt="재생 아이콘" aria-hidden="true">
+            <img class="icon-pause" src="assets/pause-circle.svg" width="24" height="24" alt="일시정지 아이콘" aria-hidden="true">
           </button></div>        <button class="slide-btn prev" aria-label="이전 배너">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -119,67 +119,171 @@
       </div>
     </section>
 
+    
+
     <section class="products">
       <div class="grid">
         <article class="card">
-          <img src="assets/prod1.avif" alt="제품1">
-          <h3>Windows 365</h3>
-          <p>클라우드 PC를 통한 유연한 업무 환경.</p>
-          <a class="link" href="#">더보기</a>
+          <img src="assets/prod1.avif" alt="Surface Pro">
+          <h3>Surface Pro, Copilot+ PC</h3>
+          <p>이 노트북의 독보적인 유연성과 Cocreator 같은 AI 기능을 활용하면 상상을 뛰어넘는 작업을 수행할 수 있습니다.</p>
+          <a class="link" href="#">자세한 내용</a>
         </article>
         <article class="card">
-          <img src="assets/prod2.avif" alt="제품2">
-          <h3>Microsoft 365</h3>
-          <p>생산성 도구와 협업 플랫폼 제공.</p>
-          <a class="link" href="#">더보기</a>
+          <img src="assets/prod2.avif" alt="AI 도우미 Copilot">
+          <h3>AI 도우미 Copilot</h3>
+          <p>항상 여러분 곁에서 도와드릴 준비가 되어 있습니다.</p>
+          <a class="link" href="#">Copilot 앱 다운로드</a>
         </article>
         <article class="card">
-          <img src="assets/prod3.avif" alt="제품3">
-          <h3>Azure</h3>
-          <p>확장 가능한 클라우드 인프라 제공.</p>
-          <a class="link" href="#">더보기</a>
+          <img src="assets/prod3.avif" alt="Xbox Game Pass Ultimate">
+          <h3>Xbox Game Pass Ultimate</h3>
+          <p>새 작품을 출시 당일에 플레이하세요. 콘솔, PC 또는 클라우드에서 수백 가지 고품질 게임을 친구와 함께 즐기세요.</p>
+          <a class="link" href="#">지금 가입하기</a>
         </article>
         <article class="card">
-          <img src="assets/prod4.avif" alt="제품4">
-          <h3>Surface</h3>
-          <p>프리미엄 하드웨어와 생산성의 결합.</p>
-          <a class="link" href="#">자세히</a>
+          <img src="assets/prod4.avif" alt="Xbox Series X">
+          <h3>Xbox Series X</h3>
+          <p>제품 역사상 가장 빠르고 강력한 Xbox.</p>
+          <a class="link" href="#">Xbox Series X 쇼핑하기</a>
         </article>
+      </div>
+    </section>
+
+    <section class="promo-banner" aria-label="프로모션 배너">
+      <div class="grid">
+        <div class="banner">
+          <picture>
+            <source type="image/avif" srcset="assets/edge.avif">
+            <img src="assets/edge.avif" alt="Microsoft Edge 프로모션 배너">
+          </picture>
+          <div class="banner-overlay">
+            <h3>Microsoft Edge</h3>
+            <p>브라우저를 사용하는 동안 더 강력한 개인 정보 보호, 생산성 향상 및 더 많은 가치를 제공하는 세계적 수준의 성능</p>
+            <a class="primary-btn" href="#">지금 다운로드하기</a>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="products">
       <div class="grid">
         <article class="card">
-          <img src="assets/prod5.avif" alt="제품1">
-          <h3>Windows 365</h3>
-          <p>클라우드 PC를 통한 유연한 업무 환경.</p>
-          <a class="link" href="#">더보기</a>
+          <img src="assets/prod5.avif" alt="비즈니스용 Surface Copilot+ PC">
+          <h3>비즈니스용 Surface Copilot+ PC(이제 Intel 탑재)</h3>
+          <p>새로운 인텔® 코어™ 울트라 프로세서(시리즈 2)가 탑재된 최초의 Surface Copilot+ PC를 소개합니다.</p>
+          <a class="link" href="#">비즈니스용 Surface Pro에 대해 자세히 알아보기</a>
         </article>
         <article class="card">
-          <img src="assets/prod6.avif" alt="제품2">
-          <h3>Microsoft 365</h3>
-          <p>생산성 도구와 협업 플랫폼 제공.</p>
-          <a class="link" href="#">더보기</a>
+          <img src="assets/prod6.avif" alt="Microsoft 365 Copilot">
+          <h3>Microsoft 365 Copilot</h3>
+          <p>비즈니스용 Microsoft 365로 AI를 사용하여 시간을 절약하고 가장 중요한 작업에 집중해 보세요.</p>
+          <a class="link" href="#">자세히 보기</a>
         </article>
         <article class="card">
-          <img src="assets/prod7.avif" alt="제품3">
-          <h3>Azure</h3>
-          <p>확장 가능한 클라우드 인프라 제공.</p>
-          <a class="link" href="#">더보기</a>
+          <img src="assets/prod7.avif" alt="비즈니스를 위한 Microsoft Teams">
+          <h3>비즈니스를 위한 Microsoft Teams</h3>
+          <p>온라인 회의, 채팅, 실시간 공동 작업 및 공유 클라우드 저장소를 모두 한곳에서 만나보세요.</p>
+          <a class="link" href="#">업무에 적합한 플랜 찾기</a>
         </article>
         <article class="card">
-          <img src="assets/prod8.jpg" alt="제품4">
-          <h3>Surface</h3>
-          <p>프리미엄 하드웨어와 생산성의 결합.</p>
-          <a class="link" href="#">자세히</a>
+          <img src="assets/prod8.jpg" alt="비즈니스용 Windows 11">
+          <h3>비즈니스용 Windows 11</h3>
+          <p>하이브리드 작업에 적합한 설계. 직원들을 위한 강력한 성능. IT 팀을 위한 일관성. 모두를 위한 보안.</p>
+          <a class="link" href="#">자세히 보기</a>
         </article>
       </div>
     </section>
   </main>
 
+  <div class="back-to-top-container">
+    <button id="back-to-top" class="back-to-top" aria-label="맨 위로 이동">
+      <svg class="icon-up" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M12 4l-7 7h4v9h6v-9h4l-7-7z" fill="currentColor"/>
+      </svg>
+      <span>맨 위로 이동</span>
+    </button>
+  </div>
   <footer class="site-footer">
-    <p>&copy; Microsoft. All rights reserved.</p>
+    <div class="footer-inner">
+      <div class="footer-nav grid footer-grid">
+        <nav class="footer-col">
+          <h4>새로운 기능</h4>
+          <ul>
+            <li><a href="#">Surface Pro</a></li>
+            <li><a href="#">Surface Laptop</a></li>
+            <li><a href="#">조직용 Copilot</a></li>
+            <li><a href="#">개인 사용자용 Copilot</a></li>
+            <li><a href="#">Microsoft 365</a></li>
+            <li><a href="#">Microsoft 제품 살펴보기</a></li>
+            <li><a href="#">Windows 11 앱</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col">
+          <h4>Microsoft Store</h4>
+          <ul>
+            <li><a href="#">계정 프로필</a></li>
+            <li><a href="#">다운로드 센터</a></li>
+            <li><a href="#">Microsoft Store 지원</a></li>
+            <li><a href="#">반품/환불</a></li>
+            <li><a href="#">주문 조회</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col">
+          <h4>교육</h4>
+          <ul>
+            <li><a href="#">Microsoft Education</a></li>
+            <li><a href="#">교육용 장치</a></li>
+            <li><a href="#">교육용 Microsoft Teams</a></li>
+            <li><a href="#">Microsoft 365 Education</a></li>
+            <li><a href="#">Office Education</a></li>
+            <li><a href="#">교육자 트레이닝 및 개발</a></li>
+            <li><a href="#">학생 및 학부모용 특가 혜택</a></li>
+            <li><a href="#">Azure for students</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col">
+          <h4>기업 고객</h4>
+          <ul>
+            <li><a href="#">Microsoft Cloud</a></li>
+            <li><a href="#">Microsoft Security</a></li>
+            <li><a href="#">Azure</a></li>
+            <li><a href="#">Dynamics 365</a></li>
+            <li><a href="#">Microsoft 365</a></li>
+            <li><a href="#">Microsoft Advertising</a></li>
+            <li><a href="#">Microsoft 365 Copilot</a></li>
+            <li><a href="#">Microsoft Teams</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col">
+          <h4>개발자 및 IT</h4>
+          <ul>
+            <li><a href="#">Microsoft 개발자</a></li>
+            <li><a href="#">Microsoft Learn</a></li>
+            <li><a href="#">AI 마켓플레이스 앱 지원</a></li>
+            <li><a href="#">Microsoft Tech 커뮤니티</a></li>
+            <li><a href="#">Azure Marketplace</a></li>
+            <li><a href="#">AppSource</a></li>
+            <li><a href="#">Microsoft Power Platform</a></li>
+            <li><a href="#">Visual Studio</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col">
+          <h4>회사</h4>
+          <ul>
+            <li><a href="#">채용 정보</a></li>
+            <li><a href="#">Microsoft 정보</a></li>
+            <li><a href="#">회사 뉴스</a></li>
+            <li><a href="#">Microsoft 개인 정보 보호</a></li>
+            <li><a href="#">투자자</a></li>
+            <li><a href="#">지속 가능성</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Microsoft. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
   <!-- Auth modal -->
